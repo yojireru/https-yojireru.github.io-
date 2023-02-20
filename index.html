@@ -89,12 +89,12 @@ body, html {
   <script>
     var selected;
     function labelClick(element) {
-      if(selected != undefined) {
+      if(selected != undefined && selected != element.id) {
         document.getElementById(selected).style.color = "rgb(127,127,127)";
         document.getElementById(selected).style.textDecoration = "none";
       }
-        selected = element.id;
-        element.style.color = "rgb(82,103,63)";
+      selected = element.id;
+      element.style.color = "rgb(82,103,63)";
     }
     function hover(element) {
       element.style.cursor = "pointer";
