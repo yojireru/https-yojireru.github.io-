@@ -28,27 +28,6 @@ body, html {
   color: white;
 
 }
-
-a:link {
-  color: #D5D5D5;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: #7F7F7F;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: #52673F;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: #52673F;
-  background-color: transparent;
-  text-decoration: underline;
-}
   
   /* Section Directory Styles */
 .section-directory {
@@ -78,27 +57,27 @@ a:active {
   <!-- Section Directory -->
 <div class="section-directory">
   <label
-    onclick="getElementById('main-text').innerHTML = 'pog', click(this)"
+    onclick="click(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Profile</label>
   <label
-    onclick="getElementById('main-text').innerHTML = 'pog', click(this)"
+    onclick="click(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Gallery</label>
   <label
-    onclick="getElementById('main-text').innerHTML = 'pog', click(this)"
+    onclick="click(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >News</label>
   <label
-    onclick="getElementById('main-text').innerHTML = 'pog', click(this)"
+    onclick="click(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Contacts</label>
   <label
-    onclick="getElementById('main-text').innerHTML = 'pog', click(this)"
+    onclick="click(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >SUPER SECRET</label>
@@ -107,8 +86,10 @@ a:active {
     function click(element) {
       selected = element;
       element.style.color = "rgb(82,103,63)";
+      console.log(element);
     }
     function hover(element) {
+      console.log(element);
       element.style.cursor = "pointer";
       element.style.textDecoration = "underline";
       element.style.color = "rgb(213,213,213)";
@@ -116,7 +97,7 @@ a:active {
     function unhover(element) {
       element.style.textDecoration = "none";
       if(selected == element) {
-        element.style. color = "rgb(82,103,63)";
+        element.style.color = "rgb(82,103,63)";
       } else {
         element.style.color = "rgb(127,127,127)";
       }
@@ -139,5 +120,6 @@ a:active {
   <br><i class="fa-solid fa-envelope"></i> shibnart@gmail.com
   </p>
   </center>
+</body>
 </body>
 </html>
