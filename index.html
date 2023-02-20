@@ -79,24 +79,30 @@ a:active {
 <div class="section-directory">
   <label
     onclick="getElementById('main-text').innerHTML = 'pog'"
-    onmouseover="this.style.cursor='pointer'; this.text-decoration='underline'"
+    onmouseover="hover(this)"
   >Profile</label>
   <label
     onclick="getElementById('main-text').innerHTML = 'pog'"
-    onmouseover="this.style.cursor='pointer'"
+    onmouseover="hover(this)"
   >Gallery</label>
   <label
     onclick="getElementById('main-text').innerHTML = 'pog'"
-    onmouseover="this.style.cursor='pointer'"
+    onmouseover="hover(this)"
   >News</label>
   <label
     onclick="getElementById('main-text').innerHTML = 'pog'"
-    onmouseover="this.style.cursor='pointer'"
+    onmouseover="hover(this)"
   >Contacts</label>
   <label
     onclick="getElementById('main-text').innerHTML = 'pog'"
-    onmouseover="this.style.cursor='pointer'"
+    onmouseover="hover(this)"
   >SUPER SECRET</label>
+  <script>
+    function hover(element) {
+      element.style.cursor = "pointer";
+      element.style.textDecoration = "underline";
+    }
+  </script>
 </div>
   
 <div class="hero-image">
@@ -105,8 +111,8 @@ a:active {
   </div>
 </div>
 
-<center><br><p id="main-text" style="color:#FFFFFF;">Hi! I'm shin. this is my website. Currently, it's a work in progress.
-  <br>I like to draw and make 3d models. one day I might make something interesting with that :)
+<center><br><p id="main-text" style="color:#FFFFFF;">Hi! I'm shin. This is my website. Currently, it's a work in progress.
+  <br>I like to draw and make 3d models. One day I might make something interesting with that :)
   <br>If you're interested in commissioning me, please dm me or email me with the details!
   <br><br><i class="fa-brands fa-twitter"></i> @<a href="https://twitter.com/yojir_e" id="">yojir_e</a>
   <br><i class="fa-brands fa-instagram"></i> @<a href="https://www.instagram.com/yojir.e/" id="">yojir.e</a>
