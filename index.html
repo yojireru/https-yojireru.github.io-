@@ -88,10 +88,14 @@ body, html {
   >SUPER SECRET</label>
   <script>
     var selected;
+    var mainText = document.getElementById("main-text");
     function labelClick(element) {
       if(selected != undefined && selected != element.id) {
         document.getElementById(selected).style.color = "rgb(127,127,127)";
         document.getElementById(selected).style.textDecoration = "none";
+      }
+      if(element.id == "Profile") {
+        mainText.innerHTML = ""
       }
       selected = element.id;
       document.getElementById("hero-text").innerHTML = element.id;
