@@ -92,9 +92,7 @@ body, html {
       if(selected != undefined && selected != element.id) {
         document.getElementById(selected).style.color = "rgb(127,127,127)";
         document.getElementById(selected).style.textDecoration = "none";
-        if(element.id == "Profile") {
-          document.getElementById("hero-text").innerHTML = "Profile";
-        }
+        document.getElementById("hero-text").innerHTML = element.id;
       }
       selected = element.id;
       element.style.color = "rgb(82,103,63)";
