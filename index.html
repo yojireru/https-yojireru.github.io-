@@ -57,49 +57,56 @@ body, html {
   <!-- Section Directory -->
 <div class="section-directory">
   <label
-    onclick="click(this)"
+    id="Profile"
+    onclick="labelClick(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Profile</label>
   <label
-    onclick="click(this)"
+    id="Gallery"
+    onclick="labelClick(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Gallery</label>
   <label
-    onclick="click(this)"
+    id="News"
+    onclick="labelClick(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >News</label>
   <label
-    onclick="click(this)"
+    id="Contacts"
+    onclick="labelClick(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >Contacts</label>
   <label
-    onclick="click(this)"
+    id="SUPER SECRET"
+    onclick="labelClick(this)"
     onmouseover="hover(this)"
     onmouseout="unhover(this)"
   >SUPER SECRET</label>
   <script>
     var selected;
-    function click(element) {
-      selected = element;
-      element.style.color = "rgb(82,103,63)";
-      console.log(element);
+    function labelClick(element) {
+      if(selected != undefined) {
+        document.getElementById(selected).style.color = "rgb(127,127,127)";
+        document.getElementById(selected).style.textDecoration = "none";
+      }
+        selected = element.id;
+        element.style.color = "rgb(82,103,63)";
     }
     function hover(element) {
-      console.log(element);
       element.style.cursor = "pointer";
       element.style.textDecoration = "underline";
       element.style.color = "rgb(213,213,213)";
     }
     function unhover(element) {
-      element.style.textDecoration = "none";
-      if(selected == element) {
+      if(selected == element.id && selected != undefined) {
         element.style.color = "rgb(82,103,63)";
       } else {
         element.style.color = "rgb(127,127,127)";
+        element.style.textDecoration = "none";
       }
     }
   </script>
