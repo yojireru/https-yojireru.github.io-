@@ -33,6 +33,7 @@ body, html {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  visible: false;
   .img {
     display: inline-block;
   }
@@ -114,7 +115,7 @@ body, html {
   </p>
 </center>
   
-<div class="gallery">
+<div class="gallery" id="gallery">
   <div class="img"><h2>Image</h2></div>
   <div class="img"><h2>Image</h2></div>
   <div class="img"><h2>Image</h2></div>
@@ -132,6 +133,7 @@ body, html {
   var mainText = document.getElementById("main-text");
   var contactText = mainText.innerHTML;
   function labelClick(element) {
+    document.getElementById("gallery").visible = false;
     if(selected != undefined && selected != element.id) {
       document.getElementById(selected).style.color = "rgb(127,127,127)";
       document.getElementById(selected).style.textDecoration = "none";
@@ -140,6 +142,7 @@ body, html {
       mainText.innerHTML = ""
     } else if(element.id == "Gallery") {
       mainText.innerHTML = ""
+      document.getElementById("gallery").visible = false;
     } else if(element.id == "News") {
       mainText.innerHTML = ""
     } else if(element.id == "Contacts") {
