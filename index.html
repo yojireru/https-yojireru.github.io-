@@ -35,7 +35,7 @@ body, html {
   white-space: nowrap;
   display: none;
   .img {
-    display: "inline-block";
+    display: inline-block;
   }
 }
   
@@ -133,7 +133,7 @@ body, html {
   var mainText = document.getElementById("main-text");
   var contactText = mainText.innerHTML;
   function labelClick(element) {
-    document.getElementById("gallery").display = "none";
+    document.getElementById("gallery").style.display = "none";
     if(selected != undefined && selected != element.id) {
       document.getElementById(selected).style.color = "rgb(127,127,127)";
       document.getElementById(selected).style.textDecoration = "none";
@@ -142,7 +142,7 @@ body, html {
       mainText.innerHTML = ""
     } else if(element.id == "Gallery") {
       mainText.innerHTML = ""
-      document.getElementById("gallery").display = "block";
+      document.getElementById("gallery").style.display = "block";
     } else if(element.id == "News") {
       mainText.innerHTML = ""
     } else if(element.id == "Contacts") {
