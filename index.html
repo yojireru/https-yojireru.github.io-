@@ -132,7 +132,7 @@ body, html {
   var mainText = document.getElementById("main-text");
   var contactText = mainText.innerHTML;
   function labelClick(element) {
-    document.getElementById("gallery").display.img = "none";
+    console.log(document.getElementById("gallery").img);
     if(selected != undefined && selected != element.id) {
       document.getElementById(selected).style.color = "rgb(127,127,127)";
       document.getElementById(selected).style.textDecoration = "none";
