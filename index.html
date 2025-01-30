@@ -155,19 +155,26 @@ body, html {
       document.getElementById(selected).style.color = "rgb(127,127,127)";
       document.getElementById(selected).style.textDecoration = "none";
     }
-    if(element.id == "Profile") {
-      mainText.innerHTML = ""
-    } else if(element.id == "Gallery") {
-      mainText.innerHTML = ""
+    
+    switch (element.id) {
+    case "Profile":
+      mainText.innerHTML = "";
+      break;
+    case "Gallery":
+      mainText.innerHTML = "";
       document.getElementById("gallery").style.display = "block";
-    } else if(element.id == "News") {
-      mainText.innerHTML = ""
-    } else if(element.id == "Contacts") {
+      break;
+    case "News":
+      mainText.innerHTML = "";
+      break;
+    case "Contacts":
       mainText.innerHTML = contactText;
-    } else if(element.id == "SUPER SECRET") {
+      break;
+    case "SUPER SECRET":
       window.location.href = "http://www.yojire.com/supersecret";
       return;
     }
+    
     selected = element.id;
     document.getElementById("hero-text").innerHTML = element.id;
     element.style.color = "rgb(82,103,63)";
