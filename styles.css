@@ -5,6 +5,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-color: black;
+    overflow: hidden;
 }
 
 #mainDiv {
@@ -50,12 +51,10 @@ body {
     object-fit: cover;
     border: 3px solid transparent;
     border-radius: 10px;
-    /* background: transparent border-box; */
     transition: background-color 0.3s ease;
 }
 
 #gallery img:hover {
-    /* background-image: linear-gradient(lightblue, aqua); */
     background-color: skyblue;
     cursor: pointer;
 }
@@ -73,15 +72,18 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#imageViewer img {
+#selectedImage {
     width: 30%;
     object-fit: contain;
-    cursor: zoom-in;
 }
 
-/* #xButton {
-    
-} */
+#xButton {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    position: fixed;
+    cursor: pointer;
+}
 
 .selectionButton {
     font-size: 120%;
