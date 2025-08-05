@@ -1,0 +1,41 @@
+body {
+    background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: black;
+}
+
+#mainDiv {
+    width: 70%;
+    max-height: max-content;
+    background-color: black;
+    border: 10px ridge #333333;
+    display: block;
+    margin: 3% auto;
+    text-align: center;
+}
+
+#pageTitle {
+    font-family: 'OctoSquares';
+    font-size: 300%;
+    text-shadow: 2px 2px 5px white;
+}
+
+#white {
+    color: white;
+}
+
+#blue {
+    color: blue;
+}
+
+.selectionButton {
+    color: gray;
+}
+
+@font-face {
+    font-family: 'OctoSquares';
+    src: url('font/TTOctosquares-DBold.woff2') format('woff2');
+}
