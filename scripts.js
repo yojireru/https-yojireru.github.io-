@@ -3,7 +3,7 @@ const galleryImages = document.querySelectorAll("#gallery img");
 const imageViewer = document.getElementById("imageViewer");
 const xButton = document.getElementById("xButton");
 const selectedImage = document.getElementById("selectedImage");
-const rect = selectedImage.getBoundingClientRect();
+
 let zoomed = false;
 
 const IMAGE_PATH = "img/";
@@ -14,7 +14,8 @@ galleryImages.forEach( (img) => {
         selectedImage.src = img.src;
         imageViewer.style.visibility = "visible";
         // glue x button to top right corner
-        xButton.style.top = rect.top - selectedImage.height / 2 - xButton.height / 2 + "px";
+        const rect = selectedImage.getBoundingClientRect();
+        xButton.style.top = rect.top - xButton.height / 2 + "px";
         xButton.style.left = rect.right - xButton.width / 2 + "px";
     });
 });

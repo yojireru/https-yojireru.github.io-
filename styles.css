@@ -42,7 +42,7 @@ body {
     display: grid;
     gap: 8% 5%;
     grid-template-columns: repeat(5, 1fr);
-    margin: 3% 15%;
+    padding: 3% 15%;
 }
 
 #gallery img {
