@@ -45,7 +45,7 @@ body {
 }
 
 #white { color: white; }
-#blue { color: #52673F; }
+#blue { color: #4A6468; }
 
 nav {
     margin: 15px 0;
@@ -61,7 +61,7 @@ nav {
     color: #aaa;
 }
 .selectionButton.selected {
-    color: #52673F;
+    color: #4A6468;
 }
 .selectionButton:hover {
     color: white;
