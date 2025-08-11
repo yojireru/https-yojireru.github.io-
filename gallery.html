@@ -3,28 +3,33 @@
 <head>
   <title>The Yojire Compendium</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 <body>
   <div id="mainDiv">
-    <p id="pageTitle">
-      <span id="white">YOJIRE</span><span id="blue">.</span><span id="white">COM</span>  
-    </p>
-    <a href="home.html" class="selectionButton unselected">HOME</a>&emsp;&emsp;
-    <a href="gallery.html" class="selectionButton selected">GALLERY</a>&emsp;&emsp;
-    <a href="news.html" class="selectionButton unselected">NEWS</a>&emsp;&emsp;
-    <a href="contact.html" class="selectionButton unselected">CONTACT</a>
-    <hr id="separator"/>
+    <header>
+      <p id="pageTitle">
+        <span id="white">YOJIRE</span><span id="blue">.</span><span id="white">COM</span>  
+      </p>
+      <nav>
+        <a href="home.html" class="selectionButton unselected">HOME</a>
+        <a href="gallery.html" class="selectionButton selected">GALLERY</a>
+        <a href="news.html" class="selectionButton unselected">NEWS</a>
+        <a href="contact.html" class="selectionButton unselected">CONTACT</a>
+        <a href="supersecret.html" class="selectionButton unselected">SUPER SECRET</a>
+      </nav>
+      <hr id="separator"/>
+    </header>
+
     <div id="gallery">
-      <!-- images go here -->
-       <img src="img/adam.png">
-       <img src="img/aeondoll.png">
-       <img src="img/agga.png">
-       <img src="img/ai-rofull.png">
-       <img src="img/background.png">
-       <img src="img/bg.jpg">
-       <img src="img/bg2.png">
+      <img src="img/adam.png" alt="Adam">
+      <img src="img/aeondoll.png" alt="Aeon Doll">
+      <img src="img/agga.png" alt="Agga">
+      <img src="img/ai-rofull.png" alt="AI Rofull">
+      <img src="img/background.png" alt="BG">
+      <img src="img/bg.jpg" alt="BG2">
+      <img src="img/bg2.png" alt="BG3">
     </div>
   </div>
 
@@ -32,8 +37,7 @@
     <img id="selectedImage">
     <img id="xButton" src="img/button/x.png">
   </div>
+
+  <script src="scripts.js?v=4" defer></script>
 </body>
-
-<script src="scripts.js?v=3" defer></script>
-
 </html>
