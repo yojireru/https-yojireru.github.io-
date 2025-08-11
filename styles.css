@@ -11,14 +11,15 @@ body {
 
 #mainDiv {
     width: 70%;
-    height: 100vh;
+    height: 85vh;
     background-color: rgba(0,0,0,0.95);
     border: 8px ridge #222;
-    display: flex;
+    display: block;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
+        z-index: 1;
 }
 
 
