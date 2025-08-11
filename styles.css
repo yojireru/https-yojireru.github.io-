@@ -123,3 +123,23 @@ nav {
     font-family: 'OctoSquares';
     src: url('font/TTOctosquares-DBold.woff2') format('woff2');
 }
+#newsSection {
+    padding: 5% 15%;
+    font-family: monospace;
+}
+
+.newsPost {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(50, 55, 96, 0.1);
+    border-left: 3px solid #323760;
+    color: #ccc;
+}
+.newsDate {
+    font-size: 0.9em;
+    color: #777;
+}
+.newsPost h3 {
+    margin-top: 5px;
+    color: white;
+}
