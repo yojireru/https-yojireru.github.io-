@@ -144,3 +144,20 @@ nav {
     margin-top: 5px;
     color: white;
 }
+#contactIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 15%;
+}
+
+#contactIcons a {
+    color: #4a6468;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+#contactIcons a:hover {
+    color: white;
+}
