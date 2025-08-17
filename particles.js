@@ -1,4 +1,4 @@
-const particleSrc = "https://raw.githubusercontent.com/yojireru/https-yojireru.github.io-/refs/heads/main/img/tricera.png";
+const particleSrc = "https://media.tenor.com/JwXVrwtwbSYAAAAj/chicken-walking.gif";
 
 function createParticle() {
   const img = document.createElement("img");
@@ -34,3 +34,4 @@ function createParticle() {
 }
 
 setInterval(createParticle, 500);
+
