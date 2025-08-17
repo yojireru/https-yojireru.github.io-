@@ -161,3 +161,9 @@ nav {
 #contactIcons a:hover {
     color: white;
 }
+.particle {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
