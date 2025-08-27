@@ -6,14 +6,14 @@ body {
     background-position: center;
     background-color: black;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 #mainDiv {
-    width: 70%;
+    width: 65%;
     height: 85vh;
     background-color: rgba(0,0,0,0.95);
-    border: 8px ridge #222;
+    border: 8px inset #121212;
     display: block;
     flex-direction: column;
     margin: 0 auto;
@@ -21,7 +21,6 @@ body {
     overflow-y: scroll;
         z-index: 1;
 }
-
 
 #mainDiv::-webkit-scrollbar {
     width: 6px;
@@ -39,10 +38,10 @@ body {
 }
 
 #pageTitle {
-    font-family: 'OctoSquares';
-    font-size: 3em;
-    text-shadow: 2px 2px 5px white;
-    margin-top: 15px;
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 35px auto;
 }
 
 #white { color: white; }
@@ -52,17 +51,21 @@ nav {
     margin: 15px 0;
 }
 .selectionButton {
-    font-size: 1em;
-    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Courier New;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 20px;
     transition: color 0.3s, text-shadow 0.3s;
+    letter-spacing: 2px;
+      line-height: 1.5;
 }
 .selectionButton.unselected {
-    color: #aaa;
+    color: #7f7f7f;
 }
 .selectionButton.selected {
     color: #4A6468;
+    text-decoration: underline;
 }
 .selectionButton:hover {
     color: white;
@@ -72,6 +75,7 @@ nav {
 #separator {
     width: 60%;
     border-color: #444;
+    margin: 30px auto;
 }
 
 #gallery {
@@ -176,3 +180,4 @@ nav {
   position: absolute;
   will-change: transform;
 }
+
