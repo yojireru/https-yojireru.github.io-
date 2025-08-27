@@ -110,6 +110,29 @@ nav {
     top: 20px;
     right: 20px;
 }
+#leftArrow, #rightArrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;   /* adjust size */
+  height: 48px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 3;
+}
+
+#leftArrow:hover, #rightArrow:hover {
+  opacity: 1;
+}
+
+#leftArrow {
+  left: 20px;
+}
+
+#rightArrow {
+  right: 20px;
+}
 
 @font-face {
     font-family: 'OctoSquares';
@@ -167,4 +190,3 @@ nav {
   position: absolute;
   will-change: transform;
 }
-
