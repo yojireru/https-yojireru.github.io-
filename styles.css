@@ -13,28 +13,13 @@ body {
     width: 65%;
     height: 85vh;
     background-color: rgba(0,0,0,0.95);
-    border: 8px solid #121212;
+    border: 8px inset #121212;
     display: block;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
         z-index: 1;
-}
-
-#mainDiv::-webkit-scrollbar {
-    width: 6px;
-    background-color: #323760;
-}
-#mainDiv::-webkit-scrollbar-track {
-    background-color: #323760;
-}
-#mainDiv::-webkit-scrollbar-thumb {
-    background-color: #323760;
-    border-radius: 0;
-}
-#mainDiv::-webkit-scrollbar-thumb:hover {
-    background-color: #323760;
 }
 
 #pageTitle {
