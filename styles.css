@@ -13,7 +13,7 @@ body {
     width: 65%;
     height: 85vh;
     background-color: rgba(0,0,0,0.95);
-    border: 8px inset #121212;
+    border: 8px solid #121212;
     display: block;
     flex-direction: column;
     margin: 0 auto;
