@@ -99,7 +99,10 @@ nav {
     background-color: rgba(0, 0, 0, 0.85);
 }
 #selectedImage {
-    width: 30%;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
 }
 #xButton {
