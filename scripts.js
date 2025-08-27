@@ -17,10 +17,6 @@ galleryImages.forEach( (img) => {
         imageViewer.style.height = document.documentElement.scrollHeight + "px";
         selectedImage.src = img.src;
         imageViewer.style.visibility = "visible";
-        // glue x button to top right corner
-        const rect = selectedImage.getBoundingClientRect();
-        xButton.style.top = rect.top - xButton.height / 2 + "px";
-        xButton.style.left = rect.right - xButton.width / 2 + "px";
     });
 });
 
