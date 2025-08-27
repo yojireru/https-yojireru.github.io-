@@ -19,6 +19,8 @@ body {
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
+    scrollbar-color: #323760 black;
+    scrollbar-width: thin;
         z-index: 1;
 }
 
