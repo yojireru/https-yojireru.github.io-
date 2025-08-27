@@ -99,10 +99,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.85);
 }
 #selectedImage {
-    max-width: 80vw;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
+    width: 30%;
     object-fit: contain;
 }
 #xButton {
@@ -192,4 +189,27 @@ nav {
 .particle {
   position: absolute;
   will-change: transform;
+}
+
+#imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#selectedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+#xButton {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  cursor: pointer;
 }
