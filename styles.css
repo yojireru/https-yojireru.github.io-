@@ -191,6 +191,14 @@ nav {
 #contactIcons a:hover {
     color: white;
 }
+
+#contactIcons a svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
 #particles {
   position: fixed;
   top: 0;
