@@ -12,12 +12,13 @@ let zoomed = false;
 
 const IMAGE_PATH = "img/";
 
-galleryImages.forEach( (img) => {
-    img.addEventListener("click", () => {
-        imageViewer.style.height = document.documentElement.scrollHeight + "px";
-        selectedImage.src = img.src;
-        imageViewer.style.visibility = "visible";
-    });
+galleryImages.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    imageViewer.style.height = document.documentElement.scrollHeight + "px";
+    currentIndex = index; // track which one is open
+    selectedImage.src = img.dataset.full || img.src;
+    imageViewer.style.visibility = "visible";
+  });
 });
 
 imageViewer.addEventListener("click", () => {
@@ -30,13 +31,15 @@ selectedImage.addEventListener("click", (e) => {
 leftArrow.addEventListener("click", (e) => {
   e.stopPropagation();
   currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-  selectedImage.src = galleryImages[currentIndex].src;
+  const newImg = galleryImages[currentIndex];
+  selectedImage.src = newImg.dataset.full || newImg.src;
 });
 
 rightArrow.addEventListener("click", (e) => {
   e.stopPropagation();
   currentIndex = (currentIndex + 1) % galleryImages.length;
-  selectedImage.src = galleryImages[currentIndex].src;
+  const newImg = galleryImages[currentIndex];
+  selectedImage.src = newImg.dataset.full || newImg.src;
 });
 document.addEventListener("keydown", (e) => {
   if (imageViewer.style.visibility === "visible") {
