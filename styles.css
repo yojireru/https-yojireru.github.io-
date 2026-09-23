@@ -15,13 +15,13 @@ body {
     background-color: rgba(0,0,0,0.95);
     border: 8px solid #121212;
     display: block;
-    flex-direction: column;
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
     scrollbar-color: #323760 black;
     scrollbar-width: thin;
-        z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 #pageTitle {
@@ -37,27 +37,43 @@ body {
 nav {
     margin: 15px 0;
 }
+
 .selectionButton {
     font-size: 18px;
     font-weight: bold;
-    font-family: Courier New;
+    font-family: Courier New, monospace;
     text-decoration: none;
     padding: 5px 20px;
     transition: color 0.3s, text-shadow 0.3s;
     letter-spacing: 2px;
-      line-height: 1.5;
+    line-height: 1.5;
 }
+
 .selectionButton.unselected {
     color: #7f7f7f;
 }
+
 .selectionButton.selected {
     color: #4A6468;
     text-decoration: underline;
 }
+
 .selectionButton:hover {
     color: white;
     text-shadow: none;
 }
+
+.selectionButton::before {
+    content: "";
+    display: inline-block;
+    width: 6.5px;
+    height: 6.5px;
+    background: #668084;
+    margin-right: 12px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+}
+
 
 #separator {
     width: 60%;
@@ -78,6 +94,7 @@ nav {
     text-align: center;
     font-size: 16px;
 }
+
 #homeContent p {
     margin-bottom: 20px;
 }
@@ -88,6 +105,7 @@ nav {
     grid-template-columns: repeat(5, 1fr);
     padding: 3% 15%;
 }
+
 #gallery img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -97,6 +115,7 @@ nav {
     box-shadow: none;
     transition: border-color 0.3s ease;
 }
+
 #gallery img:hover {
     border-color: #323760;
     box-shadow: none;
@@ -109,52 +128,65 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 20;
     display: grid;
     place-items: center;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.85);
 }
-#selectedImage {
-    width: 30%;
-    object-fit: contain;
+
+#imageWrapper {
+    position: relative;
+    display: inline-block;
 }
+
+#selectedImage {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 #xButton {
     width: 32px;
     height: 32px;
-    position: fixed;
+    position: absolute;
+    top: -12px;
+    right: -12px;
     cursor: pointer;
-    top: 20px;
-    right: 20px;
 }
+
 #leftArrow, #rightArrow {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;   /* adjust size */
-  height: 48px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  z-index: 3;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 21;
 }
 
 #leftArrow:hover, #rightArrow:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 #leftArrow {
-  left: 20px;
+    left: 20px;
 }
 
 #rightArrow {
-  right: 20px;
+    right: 20px;
 }
 
 @font-face {
     font-family: 'OctoSquares';
     src: url('font/TTOctosquares-DBold.woff2') format('woff2');
 }
+
 #newsSection {
     padding: 5% 15%;
     font-family: monospace;
@@ -167,14 +199,17 @@ nav {
     border-left: 3px solid #323760;
     color: #ccc;
 }
+
 .newsDate {
     font-size: 0.9em;
     color: #777;
 }
+
 .newsPost h3 {
     margin-top: 5px;
     color: white;
 }
+
 #contactIcons {
     display: flex;
     justify-content: center;
@@ -194,47 +229,212 @@ nav {
 }
 
 #contactIcons a svg {
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: middle;
 }
 
-#particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;
+#dustParticles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
 }
 
-.particle {
-  position: absolute;
-  will-change: transform;
+/*tabletnav*/
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    body {
+        padding-top: 32px;
+    }
+
+    #mainDiv {
+        width: 88%;
+        height: 88vh;
+        border-width: 6px;
+    }
+
+    #pageTitle {
+        max-width: 68%;
+        margin: 28px auto;
+    }
+
+    nav {
+        margin: 12px 10px;
+    }
+
+    .selectionButton {
+        font-size: 17px;
+        padding: 5px 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .selectionButton::before {
+        width: 6px;
+        height: 6px;
+        margin-right: 9px;
+    }
+
+    #separator {
+        width: 78%;
+        margin: 24px auto;
+    }
+
+    #homeContent {
+        padding: 0 15%;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    #gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px 14px;
+        padding: 4% 9%;
+    }
+
+    #newsSection {
+        padding: 5% 10%;
+    }
+
+    #contactIcons {
+        gap: 24px;
+        padding: 40px 10%;
+    }
 }
 
-#imageWrapper {
-  position: relative;
-  display: inline-block;
+/*phonenav*/
+@media (max-width: 600px) {
+    body {
+        padding-top: 12px;
+        background-attachment: scroll;
+    }
+
+    #mainDiv {
+        width: calc(100% - 24px);
+        height: calc(100vh - 24px);
+        box-sizing: border-box;
+        border-width: 4px;
+    }
+
+    #pageTitle {
+        max-width: 88%;
+        margin: 20px auto;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px 0;
+        margin: 12px 8px;
+    }
+
+    .selectionButton {
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 16px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        line-height: 1.35;
+    }
+
+    .selectionButton::before {
+        width: 5px;
+        height: 5px;
+        margin-right: 7px;
+    }
+
+    #gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
+        padding: 5% 6%;
+    }
+
+    #gallery img {
+        border-width: 2px;
+    }
+
+    #separator {
+        width: 85%;
+        margin: 18px auto;
+    }
+
+    #homeContent {
+        padding: 0 8%;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    #selectedImage {
+        max-width: 84vw;
+        max-height: 84vh;
+    }
+
+    #leftArrow, #rightArrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    #leftArrow {
+        left: 8px;
+    }
+
+    #rightArrow {
+        right: 8px;
+    }
+
+    #xButton {
+        width: 28px;
+        height: 28px;
+        top: -10px;
+        right: -10px;
+    }
+
+    #newsSection {
+        padding: 5% 7%;
+    }
+
+    #contactIcons {
+        gap: 18px;
+        padding: 30px 8%;
+    }
 }
 
-#selectedImage {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
+@media (max-width: 480px) {
+    nav .selectionButton:last-child {
+        display: none;
+    }
 
-#xButton {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  cursor: pointer;
+    .selectionButton {
+        font-size: 15px;
+        padding: 5px 7px;
+        letter-spacing: 0.8px;
+    }
+
+    .selectionButton::before {
+        width: 5px;
+        height: 5px;
+        margin-right: 5px;
+    }
+
+    #pageTitle {
+        max-width: 92%;
+        margin: 16px auto;
+    }
+
+    #separator {
+        width: 88%;
+        margin: 16px auto;
+    }
+
+    #gallery {
+        gap: 14px 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
