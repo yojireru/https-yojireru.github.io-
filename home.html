@@ -1,30 +1,149 @@
-<html lang="en"><head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Yojire Compendium</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="styles.css?v=6">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yojire Compendium</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
-  <div id="mainDiv">
-    <header>
-      <p id="pageTitle">
-       <img id="pageTitle" src="img/title2.png" alt="TITLE">
-      </p>
-      <nav>
-        <a href="home.html" class="selectionButton selected">HOME</a>
-        <a href="gallery.html" class="selectionButton unselected">GALLERY</a>
-        <a href="news.html" class="selectionButton unselected">NEWS</a>
-        <a href="contact.html" class="selectionButton unselected">CONTACT</a>
-        <a href="supersecret.html" class="selectionButton unselected">SUPER SECRET</a>
-      </nav>
-      <hr id="separator">
-    </header>
-   <div id="homeContent">
-      <p>hi! i'm shin, welcome to my little website. this page will be refined over time, but feel free to check out my gallery in the meantime! <img id="pageTitle" src="https://i.imgur.com/clodJN8.png" alt="KAITO"></p>
+
+    <div id="mainDiv">
+
+        <header>
+
+            <p id="pageTitle">
+                <img
+                    id="pageTitle"
+                    src="img/title2.png"
+                    alt="TITLE"
+                >
+            </p>
+
+            <nav>
+                <a
+                    href="home.html"
+                    class="selectionButton selected"
+                >HOME</a>
+
+                <a
+                    href="gallery.html"
+                    class="selectionButton unselected"
+                >GALLERY</a>
+
+                <a
+                    href="news.html"
+                    class="selectionButton unselected"
+                >NEWS</a>
+
+                <a
+                    href="contact.html"
+                    class="selectionButton unselected"
+                >CONTACT</a>
+
+                <a
+                    href="supersecret.html"
+                    class="selectionButton unselected"
+                >SUPER SECRET</a>
+            </nav>
+
+            <hr id="separator">
+
+        </header>
+
+<div id="desktopHome">
+        <div id="homeContent">
+
+            <div class="homeScene">
+
+                <section class="homeWelcome" aria-labelledby="welcomeTitle">
+                    <div class="homeSectionHeader">
+                        <span class="homeSectionMarker" aria-hidden="true"></span>
+                        <h1 id="welcomeTitle">WELCOME</h1>
+                        <span class="homeSectionLine" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="homeText">
+                        <p>
+                            hi, i'm shin! welcome to my little website.<br>
+                            i'm most often drawing, 3D modeling, or writing, but i'm<br>
+                            always up to something. here you'll find examples of my work<br>
+                            and some other fun pages.
+                        </p>
+                    </div>
+
+                    <p class="homeThanks">
+                        <span aria-hidden="true">■</span>
+                        thanks for stopping by!
+                        <span aria-hidden="true">■</span>
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
-  <div id="dustParticles" aria-hidden="true"></div>
-  <script src="dust.js?v=1" defer></script>
+
+
+<div id="mobileHome">
+
+    <div class="mobileWelcomeHeader">
+        <span class="mobileMarker"></span>
+        <h2>WELCOME</h2>
+        <span class="mobileHeaderLine"></span>
+    </div>
+
+    <div class="mobileWelcomeText">
+
+        <p>
+            hi, i'm shin! welcome to my little website. i'm most often drawing, 3D modeling, or writing,
+            but i'm always up to something. here you'll find
+            examples of my work and some other fun pages.
+        </p>
+
+    </div>
+
+    <img
+        src="img/pagedoll/cain_mobile.png"
+        class="mobileCain"
+        alt=""
+    >
+
+</div>
+
+
+
+</div>
+
+<div id="pagedollLayer" aria-hidden="true">
+
+    <img
+        class="pagedoll pagedoll-rock pagedoll-desktop"
+        src="img/pagedoll/rock.png"
+        alt=""
+    >
+
+    <img
+        class="pagedoll pagedoll-cain pagedoll-desktop"
+        src="img/pagedoll/cain_lit.png"
+        alt=""
+    >
+</div>
+
+    <div
+        id="dustParticles"
+        aria-hidden="true"
+    ></div>
+
+
+    <script
+        src="dust.js?v=1"
+        defer
+    ></script>
+
 </body>
+
 </html>
